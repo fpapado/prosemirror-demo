@@ -2,10 +2,15 @@
 @import './prosemirror_base.css';
 @import 'prosemirror-view/style/prosemirror.css';
 
+#editor {
+  overflow: auto;
+}
+
 /** Style for textarea */
 textarea {
+  flex-grow: 1;
   width: 100%;
-  height: 123px;
+  height: 100%;
   border: 1px solid silver;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -14,4 +19,6 @@ textarea {
   outline: none;
   font-family: inherit;
   font-size: inherit;
+  color: inherit;
+  resize: none;
 }
