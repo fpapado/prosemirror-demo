@@ -1,29 +1,42 @@
 <!doctype html>
-<html>
+<html lang="en" class="h-100">
   <head>
-    <meta charset=utf8>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProseMirror Demo</title>
 
     <link rel=stylesheet href="/index.css">
   </head>
-  <body class="mw8 center bg-white sans-serif near-black">
-    <div class="mb4">
-      <h1 class="mb3 f3 f2-ns lh-title">ProseMirror Demo</h1>
-      <a href="http://github.com/fpapado/prosemirror-demo" class="link blue underline">
-        Find the code on Github
-      </a>
+  <body class="pa3 flex flex-column h-100 mw8 center bg-white sans-serif near-black">
+    <main class="flex flex-column flex-grow-1">
+      <h1 class="mb4 f3 f2-ns lh-title">ProseMirror Demo</h1>
+
+      <div class="flex-grow-1" id="editor" style="margin-bottom: 23px"></div>
+
+    <div class="tc">
+      <label style="border-right: 1px solid silver">
+        Markdown <input type=radio name=inputformat value=markdown checked>&nbsp;</label>
+      <label>&nbsp;<input type=radio name=inputformat value=prosemirror> WYSIWYM</label>
     </div>
 
-    <div id=editor style="margin-bottom: 23px"></div>
+      <div style="display: none">
+        <textarea id="content">This is a comment written in [Markdown](http://commonmark.org). *You* may know the syntax for inserting a link, but does your whole audience?&#13;&#13;So you can give people the **choice** to use a more familiar, discoverable interface.</textarea>
+      </div>
+    </main>
+    <footer class="mt5 tc">
+      <p>
+        Made with 😱 by
+        <a href="https://twitter.com/isfotis" class="link blue underline">
+          Fotis Papadogeorgopoulos
+        </a>
+      </p>
+      <p>
+        <a href="https://github.com/fpapado/prosemirror-demo" class="link blue underline">
+          Source code on Github
+        </a>
+      </p>
+    </footer>
 
-  <div class="tc"> 
-    <label style="border-right: 1px solid silver">
-      Markdown <input type=radio name=inputformat value=markdown checked>&nbsp;</label>
-    <label>&nbsp;<input type=radio name=inputformat value=prosemirror> WYSIWYM</label>
-  </div>
-
-    <div style="display: none">
-      <textarea id="content">This is a comment written in [Markdown](http://commonmark.org). *You* may know the syntax for inserting a link, but does your whole audience?&#13;&#13;So you can give people the **choice** to use a more familiar, discoverable interface.</textarea>
-    </div>
 
     <script src="/index.js" defer></script>
   </body>
